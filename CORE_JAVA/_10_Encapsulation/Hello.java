@@ -3,7 +3,21 @@
 class Human{
     private int age;//by private variable the age is only accessed within the class
     private String name;
+
+    //Constructor//name of constructor should be same as class name
+    public Human(){//default constructor//if we do not write this constructor it will run behind the scene while making an object
+        // System.out.println("In Constructor");
+        age=12;
+        name="John";
+    }
+
    
+    public Human(int age, String name) {//parameterised constructor
+        this.age=age;
+        this.name=name;
+    }
+    
+    
     //getters and setters
     public int getAge() {
         return age;
@@ -25,20 +39,16 @@ class Human{
         this.name = name;
     }
 }
-
-
+    
+    
 public class Hello {
-
+    
     public static void main(String[] args) {
-        Human obj=new Human();
-        // obj.age=21;
-        // obj.name="kush";
-        // System.out.println(obj.name);
-        obj.setAge(21);
-        obj.setName("kush");
-        System.out.println(obj.getName()+" "+obj.getAge());
-
-
-
+        Human obj=new Human(21,"kush");//everytime when we create the new object constructor will be called.
+    // System.out.println(obj.getName()+" "+obj.getAge());  //null 0
+    
+    // obj.setAge(21);
+    // obj.setName("kush");
+    System.out.println(obj.getName()+" "+obj.getAge());
     }
 }
