@@ -2,6 +2,7 @@
 
 
 class A{
+    public char[] marks;
     public A(){
         System.out.println("Object is created");
     }
